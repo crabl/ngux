@@ -1,10 +1,5 @@
 import { Component, Input } from '@angular/core';
-
-export enum HorizontalAlignment {
-  Leading = 'leading',
-  Center = 'center',
-  Trailing = 'trailing'
-}
+import { HorizontalAlignment } from './alignment.enums';
 
 @Component({
   selector: 'vertical-stack',

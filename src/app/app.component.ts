@@ -1,16 +1,29 @@
 import { Component } from '@angular/core';
-import { HorizontalAlignment } from './vertical-stack.component';
+import { HorizontalAlignment, VerticalAlignment } from './alignment.enums';
 
 @Component({
   selector: 'app-root',
   template: `
-    <vertical-stack [alignment]="HorizontalAlignment.Leading"><view>Test</view> <view>Test</view></vertical-stack>
+    <root>
+      <vertical-stack [alignment]="HorizontalAlignment.Center">
+      <text>Test</text> <spacer></spacer> <text>Test</text>
+      </vertical-stack>
+    </root>
 
-    <horizontal-stack><div>Test</div> <div>Test</div></horizontal-stack>
+    <!--<horizontal-stack><text>Test</text> <text>Test</text></horizontal-stack>
+
+    <horizontal-stack>
+      <text>Test</text>
+      <spacer></spacer>
+      <text>Test</text>
+      <spacer></spacer>
+    </horizontal-stack>-->
   `,
   styles: []
 })
 export class AppComponent {
   public HorizontalAlignment = HorizontalAlignment;
+  public VerticalAlignment = VerticalAlignment;
+
   title = 'ngux';
 }
